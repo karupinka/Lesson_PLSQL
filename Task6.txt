@@ -1,4 +1,4 @@
----Функция------
+--------
     
 create or replace function fSalary(ID IN Number) return number is
   FunctionResult number;
@@ -8,10 +8,10 @@ begin
 end fSalary;
 
 
-Вызов
+----------------------------------
 
 DECLARE 
-nEmpID Number := &Номер_сотрудника;
+nEmpID Number := &ГЌГ®Г¬ГҐГ°_Г±Г®ГІГ°ГіГ¤Г­ГЁГЄГ ;
 
 BEGIN
   DBMS_OUTPUT.put_line(fSalary(nEmpID));
