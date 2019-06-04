@@ -11,7 +11,7 @@ end fSalary;
 ----------------------------------
 
 DECLARE 
-nEmpID Number := &Íîìåð_ñîòðóäíèêà;
+nEmpID Number := &Номер_сотрудника;
 
 BEGIN
   DBMS_OUTPUT.put_line(fSalary(nEmpID));
