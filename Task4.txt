@@ -1,5 +1,5 @@
 DECLARE
-nEmpID hr.employees.employee_id%TYPE := &Номер_сотрудника;
+nEmpID hr.employees.employee_id%TYPE := &РќРѕРјРµСЂ_СЃРѕС‚СЂСѓРґРЅРёРєР°;
 nOldSalary hr.employees.salary%TYPE;
 nNewSalary hr.employees.salary%TYPE;
 sFirstName hr.employees.first_name%TYPE;
@@ -27,9 +27,9 @@ BEGIN
     UPDATE hr.employees SET salary = nNewSalary WHERE employee_id = nEmpID;
     COMMIT;
     
-    DBMS_OUTPUT.put_line('Номер сотрудника: ' || nEmpID || 'Имя и фамилия: ' || sFirstName || ' '
-    || sLastName || 'Проработано лет: '|| nYears);
+   DBMS_OUTPUT.put_line('РќРѕРјРµСЂ СЃРѕС‚СЂСѓРґРЅРёРєР°: ' || nEmpID || 'РРјСЏ Рё С„Р°РјРёР»РёСЏ: ' || sFirstName || ' '
+    || sLastName || 'РџСЂРѕСЂР°Р±РѕС‚Р°РЅРѕ Р»РµС‚: '|| nYears);
     
-    DBMS_OUTPUT.put_line('Старая зарплата: ' || nOldSalary || 'Новая зарплата: ' || nNewSalary);
+    DBMS_OUTPUT.put_line('РЎС‚Р°СЂР°СЏ Р·Р°СЂРїР»Р°С‚Р°: ' || nOldSalary || 'РќРѕРІР°СЏ Р·Р°СЂРїР»Р°С‚Р°: ' || nNewSalary);
     
 END;
