@@ -1,0 +1,18 @@
+---Процедура------
+    
+create or replace procedure plSalary(ID in Number, nSalary in Number) is
+begin
+  UPDATE hr.employees SET salary = nSalary WHERE employee_id = ID;
+  commit;
+end plSalary;
+
+
+--------Вызов---------
+
+BEGIN
+  plSalary(nEmpID, nSalary);
+  
+  select salary into nSalaryForPrint from hr.employees where employee_id = nEmpID;
+  DBMS_OUTPUT.put_line('New salary: ' || nSalaryForPrint);
+  
+END;

@@ -1,0 +1,19 @@
+---Функция------
+    
+create or replace function fSalary(ID IN Number) return number is
+  FunctionResult number;
+begin
+  select salary into FunctionResult from hr.employees where employee_id = ID;
+  return(FunctionResult);
+end fSalary;
+
+
+Вызов
+
+DECLARE 
+nEmpID Number := &Номер_сотрудника;
+
+BEGIN
+  DBMS_OUTPUT.put_line(fSalary(nEmpID));
+  
+END;
