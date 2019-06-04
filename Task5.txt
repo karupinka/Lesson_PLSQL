@@ -34,10 +34,11 @@ FOR i IN minCounter..maxCounter LOOP
     UPDATE hr.employees SET salary = nNewSalary WHERE employee_id = i;
     COMMIT;
     
-    DBMS_OUTPUT.put_line('Номер сотрудника: ' || i || 'Имя и фамилия: ' || sFirstName || ' '
-    || sLastName || 'Проработано лет: '|| nYears);
+
+    DBMS_OUTPUT.put_line('РќРѕРјРµСЂ СЃРѕС‚СЂСѓРґРЅРёРєР°: ' || i || 'РРјСЏ Рё С„Р°РјРёР»РёСЏ: ' || sFirstName || ' '
+    || sLastName || 'РџСЂРѕСЂР°Р±РѕС‚Р°РЅРѕ Р»РµС‚: '|| nYears);
     
-    DBMS_OUTPUT.put_line('Старая зарплата: ' || nOldSalary || 'Новая зарплата: ' || nNewSalary);
+    DBMS_OUTPUT.put_line('РЎС‚Р°СЂР°СЏ Р·Р°СЂРїР»Р°С‚Р°: ' || nOldSalary || 'РќРѕРІР°СЏ Р·Р°СЂРїР»Р°С‚Р°: ' || nNewSalary);
     
 END LOOP;
     
