@@ -1,4 +1,4 @@
----Процедура------
+--------
     
 create or replace procedure plSalary(ID in Number, nSalary in Number) is
 begin
@@ -7,7 +7,7 @@ begin
 end plSalary;
 
 
---------Вызов---------
+-----------------
 
 BEGIN
   plSalary(nEmpID, nSalary);
